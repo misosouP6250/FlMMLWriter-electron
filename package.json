@@ -1,0 +1,37 @@
+{
+  "name": "flmmlwriter-electron",
+  "version": "1.0.0",
+  "description": "FlMML (PICOKAKIKO) editor",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^2.0.0",
+    "electron-builder": "^20.13.3",
+    "electron-packager": "^12.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/electron FlMMLWriter",
+    "pack": "npm run pack:win",
+    "pack:win": "electron-builder -w"
+  },
+  "build": {
+    "appId": "jp.misosouP6250.FlMMLWriter",
+    "directories": {
+      "app": "FlMMLWriter"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
+    }
+  },
+  "author": "misosouP6250 <miso.soup6250@gmail.com>",
+  "license": "MIT"
+}
