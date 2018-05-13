@@ -63,3 +63,6 @@ typings/
 
 # package-lock.json
 package-lock.json
+
+# dir /dist/
+/dist/
